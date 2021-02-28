@@ -16,5 +16,4 @@ class Bankroll
   def subtract(amount)
     @amount -= amount
   end
-
 end
