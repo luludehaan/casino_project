@@ -6,7 +6,7 @@
 # High / Low
 # Player places bet and wins / loses (hint: rand)
 # Player's bankroll goes up and down with wins and losses
-
+require_relative 'highlow'
 
 def menu
   
@@ -19,10 +19,8 @@ def menu
   case choice
   when 1
     play_slots
-    menu
   when 2
-    play_high_low
-    menu
+    high_low_menu
   when 3 
     #bankroll
     puts "You have $#{@amount.to_f.round(3)} to bet with."
