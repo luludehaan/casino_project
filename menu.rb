@@ -8,7 +8,6 @@
 # Player's bankroll goes up and down with wins and losses
 
 
-
 def menu
   
   puts "welcome to the casino. What would you like to do?"
