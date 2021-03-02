@@ -40,7 +40,7 @@ def high_low_lose
         menu
     else
         border
-        play_again
+        play_again_highlow
     end
 end
 
@@ -54,7 +54,7 @@ def high_low_win
         menu
     else
         border
-        play_again
+        play_again_highlow
     end
 end
 
@@ -77,7 +77,7 @@ def high_low_game
     end
 end
 
-def play_again
+def play_again_highlow
     puts "Do you want to play again? (1. Yes, 2. No)".cyan
     choice = gets.chomp.to_i
     case choice
