@@ -1,11 +1,15 @@
 require_relative './bankroll.rb'
 require_relative './menu.rb'
 require "BigDecimal"
+require 'colorize'
+
 class User
   
   attr_accessor :name, :age, :bankroll
 
   def initialize
+    puts "BEFORE WE GET STARTED, A FEW QUESTIONS..."
+    puts
     puts "What is your name?"
     @name = gets.strip.to_str
     puts "What is your age?"
@@ -13,7 +17,7 @@ class User
     verify_age
     puts "What does your bankroll look like, #{name}?"
     @amount = (gets.chomp.to_f.truncate(2))
-    puts "your current balance is $ #{@amount}"
+    puts "Your current balance is $ #{@amount}."
    
     initial_amount
   end
@@ -41,12 +45,12 @@ class User
       print ` say High roller`
       menu
     elsif @amount >= 1 && @amount <= 5000
-      puts "Good Luck!!"
+      puts "Good Luck!!".green
       sleep(1)
       menu
     
     else
-      puts "come back when you have some $$$"
+      puts "Come back when you have some $$$".red
       sleep(1)
       !exit
     end

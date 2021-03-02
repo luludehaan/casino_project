@@ -18,13 +18,13 @@ def menu
     menu
   when 3 
     #bankroll
-    puts "You have $#{@amount.to_f.round(3)} to bet with."
+    puts "You have $#{@amount.to_f.round(3)} to bet with.".yellow
     sleep 1
     menu
   when 4
-    puts "please come again!"
+    puts "Please Come Again!".green
     !exit
   else
-    puts "Not a valid entry"
+    puts "Not a valid entry.".red
   end
 end
