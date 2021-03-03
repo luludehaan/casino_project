@@ -1,5 +1,6 @@
 require_relative './bankroll.rb'
 require_relative './menu.rb'
+require_relative './coin_toss.rb'
 require "BigDecimal"
 require 'colorize'
 
@@ -8,7 +9,7 @@ class User
   attr_accessor :name, :age, :bankroll
 
   def initialize
-    puts "BEFORE WE GET STARTED, A FEW QUESTIONS..."
+    puts "BEFORE WE GET STARTED, A FEW QUESTIONS...".bold
     puts
     puts "What is your name?"
     @name = gets.strip.to_str
@@ -17,7 +18,7 @@ class User
     verify_age
     puts "What does your bankroll look like, #{name}?"
     @amount = (gets.chomp.to_f.truncate(2))
-    puts "Your current balance is $ #{@amount}."
+    puts "Your current balance is $#{@amount}."
    
     initial_amount
   end
@@ -29,9 +30,9 @@ class User
       print ` say You need to leave the casino!`
       !exit
     elsif @age >= 21 
-      print `say welcome`
+      print `say Welcome`
     else @age == 0
-      print `say please try again!`
+      print `say Please Try Again!`
       sleep(2)
       initialize
     end
