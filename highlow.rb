@@ -5,7 +5,27 @@ def border
 end
 
 def high_low_menu
-    puts "************   WELCOME TO HIGH LOW   ************".yellow 
+    high_low = puts <<-'EOF'
+        
+        /$$   /$$ /$$           /$$              /$$        /$$$$$$  /$$      /$$
+        | $$  | $$|__/          | $$             | $$       /$$__  $$| $$  /$ | $$
+        | $$  | $$ /$$  /$$$$$$ | $$$$$$$        | $$      | $$  \ $$| $$ /$$$| $$
+        | $$$$$$$$| $$ /$$__  $$| $$__  $$       | $$      | $$  | $$| $$/$$ $$ $$
+        | $$__  $$| $$| $$  \ $$| $$  \ $$       | $$      | $$  | $$| $$$$_  $$$$
+        | $$  | $$| $$| $$  | $$| $$  | $$       | $$      | $$  | $$| $$$/ \  $$$
+        | $$  | $$| $$|  $$$$$$$| $$  | $$       | $$$$$$$$|  $$$$$$/| $$/   \  $$
+        |__/  |__/|__/ \____  $$|__/  |__//$$$$$$|________/ \______/ |__/     \__/
+                        /$$  \ $$         |______/                                 
+                        $$$$$$/  |                                                
+                        \______/                                                   
+    EOF
+    
+    puts
+    puts
+
+
+
+    puts "*********************   WELCOME TO HIGH LOW   *********************".yellow 
     puts
     puts "A banker number and player number will be drawn.".cyan 
     puts "If the player's number is higher, you win!".cyan
@@ -88,6 +108,7 @@ def play_again_highlow
         high_low_menu
     end
 end
+
 
 
 # high_low_menu

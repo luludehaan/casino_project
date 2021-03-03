@@ -1,8 +1,18 @@
 require_relative 'highlow'
 require_relative 'slots_menu'
 
-def menu
 
+def menu
+  casino = puts <<-'EOF'
+    .------..------..------..------..------..------.
+    |C.--. ||A.--. ||S.--. ||I.--. ||N.--. ||O.--. |
+    | :/\: || (\/) || :/\: || (\/) || :(): || :/\: |
+    | :\/: || :\/: || :\/: || :\/: || ()() || :\/: |
+    | '--'C|| '--'A|| '--'S|| '--'I|| '--'N|| '--'O|
+    `------'`------'`------'`------'`------'`------'
+
+  EOF
+  
   puts "welcome to the casino. What would you like to do?"
   puts "1) Play Slots?"
   puts "2) Play High Low?"
