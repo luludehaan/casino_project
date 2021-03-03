@@ -33,6 +33,6 @@ def bet_balance
             puts "Please place a higher bet.".red
             bet_balance
         else
-            puts "You have $#{@amount} total, and your bet is $#{@amount}.".yellow
+            puts "You have $#{@amount} total, and your bet is $#{@bet}.".yellow
     end
 end
