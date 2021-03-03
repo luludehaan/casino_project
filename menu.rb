@@ -3,6 +3,7 @@ require_relative 'slots_menu'
 
 
 def menu
+  pid = fork{ exec 'afplay', "casinosound.mp3" }
   casino = puts <<-'EOF'
     .------..------..------..------..------..------.
     |C.--. ||A.--. ||S.--. ||I.--. ||N.--. ||O.--. |

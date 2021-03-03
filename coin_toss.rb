@@ -1,5 +1,5 @@
 def coin_menu
-    puts "*********************   WELCOME TO COIN TOSS   *********************".yellow 
+    puts "*********************   WELCOME TO COIN TOSS   *********************".yellow.bold 
     puts
     puts "If you guess which face the coin lands on, you win!.".cyan 
     puts
@@ -34,6 +34,7 @@ def coin_toss
     end
     border
     puts "The coin is...".blink
+    pid = fork{ exec 'afplay', "coinflip.mp3" }
     sleep(3)
     puts
     puts "#{@coin.upcase.bold}!!!!"

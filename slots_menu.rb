@@ -1,7 +1,7 @@
 
 def
     slot_game
-    
+    pid = fork{ exec 'afplay', "slotsound.mp3" }
     @first_slot = rand(1..5)
     @second_slot = rand(1..5)
     @third_slot = rand(1..5)

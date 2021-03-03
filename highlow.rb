@@ -25,7 +25,7 @@ def high_low_menu
 
 
 
-    puts "*********************   WELCOME TO HIGH LOW   *********************".yellow 
+    puts "*********************   WELCOME TO HIGH LOW   *********************".yellow.bold 
     puts
     puts "A banker number and player number will be drawn.".cyan 
     puts "If the player's number is higher, you win!".cyan
@@ -82,7 +82,7 @@ def high_low_game
     @banker_num = rand(1..10)
     @player_num = rand(1..10)
     border
-    puts "RESULTS"
+    puts "RESULTS".bold
     puts
     puts "The banker's number is #{@banker_num}".yellow
     puts "The player's number is #{@player_num}".cyan
