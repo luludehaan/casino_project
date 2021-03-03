@@ -13,11 +13,12 @@ def menu
 
   EOF
   
-  puts "welcome to the casino. What would you like to do?"
+  puts "Welcome to the Casino. What would you like to do?".bold
   puts "1) Play Slots?"
   puts "2) Play High Low?"
-  puts "3) how much have you lost?"
-  puts "4) Exit?"
+  puts "3) Play Coin Toss?"
+  puts "4) How Much Have You Lost?"
+  puts "5) Exit?"
   choice = gets.chomp.to_i
   case choice
   when 1
@@ -26,12 +27,14 @@ def menu
   when 2
     high_low_menu
     menu
-  when 3 
+  when 3
+    coin_menu
+  when 4 
     #bankroll
     puts "You have $#{@amount.to_f.round(3)} to bet with.".yellow
     sleep 1
     menu
-  when 4
+  when 5
     puts "Please Come Again!".green
     !exit
   else
