@@ -13,7 +13,7 @@ def menu
 
   EOF
   
-  puts "Welcome to the Casino. What would you like to do?".bold
+  puts "Welcome to the Casino. What would you like to do?".yellow.bold
   puts "1) Play Slots?"
   puts "2) Play High Low?"
   puts "3) Play Coin Toss?"
