@@ -1,6 +1,8 @@
-require_relative './bankroll.rb'
-require_relative './menu.rb'
-require_relative './coin_toss.rb'
+require_relative 'bankroll.rb'
+require_relative 'menu.rb'
+require_relative 'coin_toss.rb'
+require_relative 'highlow'
+require_relative 'slots_menu'
 require "BigDecimal"
 require 'colorize'
 
@@ -10,7 +12,7 @@ class User
 
   def initialize
 
-    msg = ' YOU MUST BE 21 OR OLDER TO ENTER THE CASINO!!!!'
+    msg = 'YOU MUST BE 21 OR OLDER TO ENTER THE CASINO!!!!'
 
     5.times do
       print "\r#{ msg }".red
@@ -19,21 +21,19 @@ class User
       sleep 0.5
     end
     puts
-    
     puts "BEFORE WE GET STARTED, A FEW QUESTIONS...".bold
     puts
     puts "What is your name?"
     @name = gets.strip.to_str
     puts
-    
-
     puts "What is your age?"
     #@age = gets.to_i
     verify_age
+    puts
     puts "What does your bankroll look like, #{name}?"
     @amount = (gets.chomp.to_f.truncate(2))
     puts "Your current balance is $#{@amount}."
-   
+    puts
     initial_amount
   end
 
@@ -55,7 +55,6 @@ class User
 
   def initial_amount
     amount = @amount
-    
     if @amount >= 5000
       print ` say High roller`
       menu
@@ -63,14 +62,11 @@ class User
       puts "Good Luck!!".green
       sleep(1)
       menu
-    
     else
       puts "Come back when you have some $$$".red
       sleep(1)
       !exit
     end
-    
   end
-
 end
 User.new

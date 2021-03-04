@@ -1,9 +1,3 @@
-def border
-    puts
-    puts "-" * 40
-    puts
-end
-
 def high_low_menu
     high_low = puts <<-'EOF'
         
@@ -108,7 +102,3 @@ def play_again_highlow
         high_low_menu
     end
 end
-
-
-
-# high_low_menu
