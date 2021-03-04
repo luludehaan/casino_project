@@ -9,10 +9,24 @@ class User
   attr_accessor :name, :age, :bankroll
 
   def initialize
+
+    msg = ' YOU MUST BE 21 OR OLDER TO ENTER THE CASINO!!!!'
+
+    5.times do
+      print "\r#{ msg }".red
+      sleep 0.5
+      print "\r#{ ' ' * msg.size }\r".red 
+      sleep 0.5
+    end
+    puts
+    
     puts "BEFORE WE GET STARTED, A FEW QUESTIONS...".bold
     puts
     puts "What is your name?"
     @name = gets.strip.to_str
+    puts
+    
+
     puts "What is your age?"
     #@age = gets.to_i
     verify_age
