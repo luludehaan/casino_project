@@ -1,6 +1,8 @@
-require_relative 'highlow'
-require_relative 'slots_menu'
-
+def border
+    puts
+    puts "-" * 40
+    puts
+end
 
 def menu
   pid = fork{ exec 'afplay', "casinosound.mp3" }
@@ -14,12 +16,13 @@ def menu
 
   EOF
   
-  puts "Welcome to the Casino. What would you like to do?".yellow.bold
+  puts "WELCOME TO THE CASINO. What would you like to do?".yellow.bold
   puts "1) Play Slots?"
   puts "2) Play High Low?"
   puts "3) Play Coin Toss?"
   puts "4) How Much Have You Lost?"
   puts "5) Exit?"
+  border
   choice = gets.chomp.to_i
   case choice
   when 1
